@@ -129,6 +129,10 @@ public class VentanaConMemoriaApp extends Application {
         root.setAlignment(Pos.CENTER);
         root.getChildren().addAll(redHB, greenHB, blueHB);
 
+        // Aplica el color inicial al fondo usando los valores cargados
+        Color colorInicial = Color.rgb(red.get(), green.get(), blue.get());
+        root.setBackground(Background.fill(colorInicial));
+
         Scene scene = new Scene(root, width.get(), height.get());
 
         primaryStage.setX(x.get());
